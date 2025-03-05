@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
+import { Suspense } from 'react';
 import {
   GoogleReCaptchaProvider as Provider,
   GoogleReCaptcha as ReCaptcha,
@@ -142,7 +143,6 @@ export const Contact = () => {
             subject: "",
             company_sector: "",
             message: "",
-            product_url: "",  // Resetujte URL
             accept_rules: false,
             gcaptcha: token,
           });
@@ -171,7 +171,9 @@ export const Contact = () => {
 
   return (
     <Provider reCaptchaKey={process.env.CAPTCHAKEY}>
+      <Suspense>
       <ReCaptcha onVerify={verifyCaptcha} refreshReCaptcha={refreshReCaptcha} />
+      </Suspense>
       <Layout>
         <div className={`ml-auto flex justify-start md:justify-end mt-5`}>
           <Breadcrumbs name={`Kontakt`} parents={[]} />
