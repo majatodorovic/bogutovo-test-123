@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    min-width: 0;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .item-hover {
+    @apply hover:bg-boa-red px-2 pt-[0.495rem] pb-[0.275rem] rounded-md hover:text-white leading-[100%];
+  }
+  .item-active {
+    @apply bg-boa-red px-2 pt-[0.495rem] pb-[0.275rem] rounded-md text-white leading-[100%];
+  }
+}
+
+.itemsSwiper .swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  left: 1%;
+  bottom: 4px;
+  top: auto;
+  z-index: 50;
+  height: 4px;
+  width: 60% !important;
+  margin: 0 auto !important;
+  right: 0 !important;
+  border-radius: 0 !important;
+}
+
+.itemsSwiper .swiper-scrollbar-drag {
+  border-radius: 0 !important;
+}
+.divider > button:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 18px;
+  top: 1px;
+  right: -14px;
+  background-color: #e5e5e5;
+  margin-left: 3rem;
+}
+
+#thumbsSwiper .swiper-slide {
+  opacity: 0.5 !important;
+}
+
+#thumbsSwiper .swiper-slide-thumb-active {
+  opacity: 1 !important;
+}
+
+.nospinner::-webkit-inner-spin-button,
+.nospinner::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.nospinner {
+  -moz-appearance: textfield; /* For Firefox */
+}
+
+.profilHolder {
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+}
+.profilNav {
+  min-width: 20rem;
+}
+
+.profilNav button {
+  padding-left: 1.6rem;
+  padding-right: 6rem;
+  margin-bottom: 0.4rem;
+}

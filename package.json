@@ -1,0 +1,36 @@
+{
+  "name": "bogutovo-b2c",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo --experimental-https",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^5.16.5",
+    "@react-google-maps/api": "^2.19.3",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.15",
+    "@tanstack/query-sync-storage-persister": "^5.51.1",
+    "@tanstack/react-query": "^5.51.1",
+    "@tanstack/react-query-persist-client": "^5.51.1",
+    "axios": "^1.7.2",
+    "js-cookie": "^3.0.5",
+    "next": "^14.2.0",
+    "prettier": "^3.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-google-recaptcha-v3": "^1.10.1",
+    "react-toastify": "^10.0.5",
+    "sharp": "^0.33.5",
+    "swiper": "^11.1.5"
+  },
+  "devDependencies": {
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
