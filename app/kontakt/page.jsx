@@ -1,7 +1,12 @@
 import { Contact as Page } from "@/_pages/contact";
+import { Suspense } from "react";
 
 const Contact = () => {
-  return <Page />;
+  return (
+    <Suspense>
+  <Page />
+  </Suspense>
+);
 };
 
 export default Contact;
