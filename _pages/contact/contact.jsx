@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useState, useCallback } from "react";
-import { Suspense } from 'react';
+import { useEffect, useState, useCallback, Suspense } from "react";
 import {
   GoogleReCaptchaProvider as Provider,
   GoogleReCaptcha as ReCaptcha,
@@ -171,9 +170,8 @@ export const Contact = () => {
 
   return (
     <Provider reCaptchaKey={process.env.CAPTCHAKEY}>
-      <Suspense>
-      <ReCaptcha onVerify={verifyCaptcha} refreshReCaptcha={refreshReCaptcha} />
-      </Suspense>
+           <Suspense fallback={<div>Loading...</div>}>
+        <ReCaptcha onVerify={verifyCaptcha} refreshReCaptcha={refreshReCaptcha} />
       <Layout>
         <div className={`ml-auto flex justify-start md:justify-end mt-5`}>
           <Breadcrumbs name={`Kontakt`} parents={[]} />
@@ -342,6 +340,7 @@ export const Contact = () => {
           </form>
         </div>
       </Layout>
+      </Suspense>
     </Provider>
   );
 };
